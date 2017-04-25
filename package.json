@@ -1,6 +1,6 @@
 {
   "name": "stateful-result",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A module for representing an operation result with a meaningful status code.",
   "author": "Eric Yu",
   "email": "airic.yu@gmail.com",

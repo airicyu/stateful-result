@@ -17,7 +17,7 @@ Hence, code 200 for status of operation OK, and code 404 for status of operation
 
 ## Project Page
 
-//- [Project Home](http://blog.airic-yu.com/1880/stateful-result-js-nodejs-module-using-jquery-manipulate-foldersfiles)
+- [Project Home](http://blog.airic-yu.com/2052/stateful-result-nodejs-module-represent-operation-result-status-code)
 - [Github](https://github.com/airicyu/stateful-result)
 - [NPM](https://www.npmjs.com/package/stateful-result)
 
@@ -159,15 +159,15 @@ It would have below attributes (in addition to JS's native Error object):
 ## API
 Result object method APIs:
 
-- [new Result(props)](#result)
+- [new Result(props)](#new-resultprops)
 - [isSuccess()](#issuccess)
-- [get(propertiesArr)](#get)
-- [getOrThrow(propertiesArr)](#getorthrow)
+- [get(propertiesArr)](#getpropertiesarr)
+- [getOrThrow(propertiesArr)](#getorthrowpropertiesarr)
 - [getContext()](#getcontext)
 - [getContextOrThrow()](#getcontextorthrow)
-- [sendResponse(res, type)](#sendresponse)
-- [static newSuccess(props)](#newsuccess)
-- [static newFail(props)](#newfail)
+- [sendResponse(res, type)](#sendresponseres-type)
+- [static newSuccess(props)](#static-newsuccessprops)
+- [static newFail(props)](#static-newfailprops)
 
 ------------------------
 
@@ -210,15 +210,15 @@ You may refer to above sample 1.
 
 ### getOrThrow(propertiesArr)
 
-Basically it is similar to [get()](#get) except that if the result is failed, it would throw the error instead of returning result.
+Basically it is similar to [get()](#getpropertiesarr) except that if the result is failed, it would throw the error instead of returning result.
 
 #### parameters:
 
-Same as [get()](#get)
+Same as [get()](#getpropertiesarr)
 
 #### return value:
 
-Same as [get()](#get)
+Same as [get()](#getpropertiesarr)
 
 #### Sample:
 You may refer to above sample 3.
@@ -227,7 +227,7 @@ You may refer to above sample 3.
 
 ### getContext()
 
-It is similar to [get()](#get).
+It is similar to [get()](#getpropertiesarr).
 However, the returned value is an object(attribute mapping object) instead of Array.
 
 #### return value:
